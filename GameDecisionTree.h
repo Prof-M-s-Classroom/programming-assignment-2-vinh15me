@@ -76,7 +76,7 @@ public:
         std::cout << root->data.description << endl;
         string input;
         cin >> input;
-        for each(char c in input) {
+        for (char c : input) {
             toupper(c);
         }
         if (input == "LEFT") {
