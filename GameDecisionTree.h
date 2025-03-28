@@ -13,7 +13,7 @@ template <typename T>
 
 class GameDecisionTree {
 private:
-    Node<T>* root;
+    Node<T*>* root;
 
 public:
     // TODO: Constructor
@@ -29,7 +29,6 @@ public:
             cout << "Could not open file " << filename << endl;
             return;
         }
-        cout << "Loading story " << filename << endl;
 
 
         string line, word, event;
@@ -38,7 +37,7 @@ public:
 
 
         while (getline(file, line)) {
-            cout << line << endl;
+            //cout << line << endl;
             stringstream ss(line);
             for (int i = 0; i<4; i++) {
                 getline(ss, word, delimiter);
@@ -61,7 +60,7 @@ public:
                 }
             }
             Story* newStory = new Story(event, eventNumber, leftChildNumber, rightChildNumber);
-            Node<Story>* newNode = new Node<Story>(*newStory);
+            Node<Story*>* newNode = new Node<Story*>(newStory);
             if (root == NULL) {
                 root = newNode;
             }
@@ -71,55 +70,17 @@ public:
 
         }
     }
-    void preOrder() {
-        if (!root) return;
-        std::cout << root->data.description << endl;
-        string input;
-        cin >> input;
-        for (char c : input) {
-            toupper(c);
-        }
-        if (input == "LEFT") {
-            preOrder(root->left);
-        }
-        else if (input == "RIGHT") {
-            preOrder(root->right);
-        }
-        else {
-            cout << "PLease type left or right." << endl;
-            preOrder();
-        }
-        return;
-    }
 
-    void preOrder(Node<Story>* temp) {
-        if (!root) return;
-        std::cout << root->data.description << endl;
-        string input;
-        cin >> input;
-        for each(char c in input) {
-            toupper(c);
-        }
-        if (input == "LEFT") {
-            preOrder(temp->left);
-        }
-        else if (input == "RIGHT") {
-            preOrder(temp->right);
-        }
-        else {
-            cout << "PLease type left or right." << endl;
-            preOrder(temp);
-        }
-    }
 
-    void insertNode(Node<Story>* base, int targetEventNumber, Node<Story>* newNode) {
-        if (base->data.leftEventNumber == targetEventNumber) {
+    void insertNode(Node<Story*>* base, int targetEventNumber, Node<Story*>* newNode) {
+        if (base == nullptr) {
+            return;
+        }
+        if (base->data->leftEventNumber == targetEventNumber) {
             base->left = newNode;
-            return;
         }
-        else if (base->data.rightEventNumber == targetEventNumber) {
+        if (base->data->rightEventNumber == targetEventNumber) {
             base->right = newNode;
-            return;
         }
         else if( base->right == nullptr && base->left == nullptr) {
             return;
@@ -132,7 +93,48 @@ public:
 
 
     // TODO: Function to start the game and traverse the tree based on user input
-    void playGame(){}
+    void playGame() {
+        if (!root) return;
+        cout << root->data->description << endl;
+        int input;
+        cin >> input;
+        if (input == 1) {
+            goThroughStory(root->left);
+        }
+        else if (input == 2) {
+            goThroughStory(root->right);
+        }
+        else {
+            cout << "Please type 1 for the first choice or 2 for the second choice." << endl;
+            cin.clear();
+            cin.ignore();
+            playGame();
+        }
+    }
+
+    void goThroughStory(Node<Story*>* temp) {
+        if (!temp) return;
+        cout << temp->data->description << endl;
+        if (temp->data->leftEventNumber == -1 && temp->data->rightEventNumber == -1) {
+            cout << "The End!" << endl;
+            return;
+        }
+        int input;
+        cin >> input;
+        if (input == 1) {
+            goThroughStory(temp->left);
+        }
+        else if (input == 2) {
+            goThroughStory(temp->right);
+        }
+        else {
+            cout << "Please type 1 for the first choice or 2 for the second choice." << endl;
+            cin.clear();
+            cin.ignore();
+            goThroughStory(temp);
+        }
+    }
+
 };
 
 #endif // GAMEDECISIONTREE_H
