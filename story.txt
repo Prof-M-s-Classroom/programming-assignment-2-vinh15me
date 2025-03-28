@@ -1,6 +1,25 @@
-1 | You wake up in a forest clearing. There are two paths. | 2 | 3
-2 | You follow the path to the left and encounter a river. | 4 | 5
-3 | You go right and find an old cabin. | 5 | 6
-4 | You swim across the river and find a treasure chest. | -1 | -1
-5 | You find a hidden passageway that leads to a secret room. | 7 | -1
-6 | The cabin is empty. You find a trapdoor leading downwards. | -1
+1 | Hello! Welcome to my game. Here, you will input the number 1 or the number 2 to make your decision. You got that? (1 for "Yes", 2 for "No") | 2 | 3
+2 | Nice! You said yes so you understand the base of the game. You'll go through a story and make these 2 sided decisions. Enjoy! (1 for "ok", 2 for "Ok but slightly cooler than the first option") | 4 | 5
+3 | What... You just made the decision. You're just gonna do that but multiple times through the story. (1 for "ok...", 2 for "But I don't wanna read")| 6 | 7
+4 | Perfect! Let's start the story! (1 for "Yeah!", 2 for "ok") | 9 | 9
+5 | Alright cool guy... Let's just start the story (1 for "yes, I am COOL", 2 for "fine") | 9 | 9
+6 | You're gonna be fine, it's pretty simple! Let's just start the story and you'll figure it out. (1 for "ok...", 2 for "I hate everything") | 9 | 9
+7 | Well that's too bad, you're gonna have to read my epic story... please read it i worked hard on it (1 for "Fine... but with a visible look of frustration", 2 for "Ok")| 8 | 8
+8 | Thanks... Now let's get on with the story. (1 for "ok...", 2 for "I hate you.") | 9 | 9
+9 | You wake up on floor of an abandon mansion, spider webs and creepy galore. (1 for "Get up from the floor", 2 for "lie there and check your body for anything") | 10 | 11
+10 | You look around and take note of the locked doors and window. You also see someone move behind the window. (1 for "Investigate the window", 2 for "Check the door for the lock") | 12 | 13
+11 | You pat yourself down, noting the lack of injuries on your body. You also found one of your favorite Swiss Army Knifes in your pocket. Although a little small for the occasion, the knife can get the job done. You notice the locked door and a window (1 for "Check out the window", 2 for "Check the door for the lock") | 14 | 15
+12 | The creepy figure in the window peaking your interest, you check out the window but only see an empty room just like yours. (1 for "Keep looking in the room", 2 for "Take a look at the lock on the door") | 16 | 13
+13 | Ignoring the creepy figure, you check out the lock, noting its rustiness, but with nothing to break it with, you really can't do much with it. (1 for "Check your body for something to break the lock with", 2 for "Check your surroundings for something to break the lock with") | 17 | 19
+14 | You see an empty room just like yours, nothing notable. (1 for "Keep looking, there GOTTA be something", 2 for "Go look at the door.") | 18 | 20
+15 | You see the lock on the door, but it looks really rusted and old. You probably think you can break it with the knife you have. (1 for "screw it, SMASH THE DOOR OPEN!", 2 for "no wait, I actually like this knife") | 21 | 22
+16 | You keep looking, swearing on your life you saw something. Looking closer, you notice a small child cowering in the corner. (1 for "Try to talk to the child", 2 for "nah, I'm not good with children") | 23 | 24
+17 | You check your body for something, anything, and guess what! You found one of your favorite swiss army knifes! Maybe you can break the lock with it. (1 for "screw it, SMASH THE DOOR OPEN!", 2 for "no wait, I actually like this knife") | 21 | 22
+18 | You keep your eyes open, so open that you forget to blink in hopes that there is something there. Too bad there is nothing there, so your eyes hurt for no reason. If someone was there, they found a pretty good hiding spot (1 for "Check the rest of the room for something", 2 for "Check the door lock") | 19 | 20
+19 | You look around and find a very convenient hammer placed there by me to make this story a lot shorter. (1 for "It's hammer time and that door does NOT stand a chance", 2 for "No, I wanna work for my goal") | 21 | 25
+20 | With nothing of note there, you check the door and find the rusted door. You probably need a tool to break it, good thing your pocket knife is here. (1 for "Smash that door lock and open it", 2 for "no wait I kinda like the knife.") | 21 | 22
+21 | You smash the door lock and open the door... only to find a masked figure who lunges at you as your vision fades to black... | -1 | -1
+22 | You look at your knife, the nice sheen on the knife, obviously getting too into your knife and thinking about adding it to your collection. You looked at it so much, you didn't notice the door opening and a masked man jumped you! Your vision fades to black... | -1 | -1
+23 | You talk to the child, show how you aren't a bad guy. The child seems to believe you. Nice, you aren't the only one here, and, hey look! A masked figure in the reflection of the window! Oh, wait, that's bad. The masked man jumped you and your vision fades to black... | -1 | -1
+24 | You turn around, noting your bad experiences with children, only to see a masked man in front of you! You fight back, only to realize this figure is better at fighting in every way possible and you get whooped. Your vision goes to black... | -1 | -1
+25 | Well too bad, I'm gonna make you break the door so I don't have to make more story. You break the door unwillingly and see a masked guy, too bad you with a hammer loses to the masked figure with nothing... dang you got destroyed... well your vision fades to black. | -1 | -1

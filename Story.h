@@ -15,6 +15,7 @@ public:
 
     // Parameterized constructor
     Story(string desc, int num, int leftNum, int rightNum);
+
 };
 
 #endif // STORY_H
